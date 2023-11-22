@@ -1,0 +1,21 @@
+.header {
+	display: flex;
+	height: 60px;
+	align-items: center;
+	justify-content: space-between;
+
+	.logo {
+		font-size: 25px;
+		font-weight: 700;
+	}
+
+	img {
+		height: 20px;
+	}
+
+	.links {
+		.basket {
+			margin-left: 37px;
+		}
+	}
+}

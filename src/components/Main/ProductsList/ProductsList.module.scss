@@ -1,0 +1,25 @@
+@import './../../../App/variables.scss';
+
+h2 {
+	font-size: 20px;
+	color: $font-color-gray;
+	margin-bottom: 20px;
+}
+
+.list {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	column-gap: 15px;
+	row-gap: 15px;
+	justify-content: space-between;
+
+	@media (max-width:1110px) {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-evenly;
+	}
+
+	@media (max-width:756px) {
+		grid-template-columns: repeat(1, auto);
+		justify-content: space-evenly;
+	}
+}
