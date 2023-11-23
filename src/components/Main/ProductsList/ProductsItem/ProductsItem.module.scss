@@ -10,20 +10,26 @@
 	grid-template-columns: 50% 50%;
 	grid-template-rows: repeat(4, auto);
 	justify-self: center;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
+	cursor: pointer;
 
 	.likeButton {
 		grid-row-start: 1;
 		grid-column-start: 1;
+
+		img {
+			cursor: pointer;
+		}
 	}
 
 	.productImg {
-		grid-row-start: 1;
+		grid-row-start: 2/3;
 		grid-column: 1/3;
 		justify-self: center;
 		height: 235px;
-		object-fit: cover;
+		object-fit: contain;
 		width: 219px;
-		margin-bottom: 50px;
+		margin-bottom: 30px;
 	}
 
 	.name {
@@ -31,20 +37,20 @@
 		grid-column: 1/3;
 		max-width: 200px;
 		color: $font-color-black;
-		grid-row: 2/4;
+		grid-row: 3/4;
 	}
 
 	.price {
 		color: $fonr-color-orange;
 		grid-column: 2/3;
-		grid-row: 2/3;
+		grid-row: 3/4;
 		justify-self: end;
 	}
 
 	.rating {
 		display: flex;
-		align-items: center;
-		align-self: end;
+		align-items: end;
+		align-self: center;
 
 		img {
 			margin-right: 10px;
@@ -52,6 +58,7 @@
 
 		p {
 			color: $font-color-gray;
+
 		}
 	}
 }

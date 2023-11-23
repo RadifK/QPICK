@@ -1,5 +1,5 @@
 import s from './Banner.module.scss'
-import img from './../../../assets/img/pngJpeg/iphone13-img.png'
+import img from 'src/assets/img/pngJpeg/iphone13-img.png'
 
 const Banner = () => {
 	return (

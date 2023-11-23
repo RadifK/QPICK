@@ -1,41 +1,18 @@
 import s from './ProductsList.module.scss'
 import ProductsItem from './ProductsItem/ProductsItem'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useSelector } from 'react-redux'
+import { RootState } from 'src/redux/store'
 
 
-type products = {
-	id: number,
-	name: string,
-	price: string,
-	rating: number,
-	img: string,
-	isLiked: Boolean
-}
+
+
 
 const ProductsList = () => {
 
-	const [products, setProducts] = useState<products[]>([])
+	const products = useSelector((state: RootState) => state.products)
 
-	async function fetchPosts() {
-		const response = await axios.get('https://65230e39f43b179384153062.mockapi.io/asd')
-		setProducts(response.data)
 
-	}
 
-	useEffect(() => {
-
-		fetchPosts()
-	}, [])
-
-	const like = (id: number) => {
-		setProducts(products.map(p => {
-			if (p.id === id) {
-				p.isLiked = !p.isLiked
-			}
-			return p
-		}))
-	}
 
 
 	return (
@@ -48,9 +25,8 @@ const ProductsList = () => {
 					id={p.id}
 					price={p.price}
 					rating={p.rating}
-					img={p.img}
+					img={p.photo}
 					isLiked={p.isLiked}
-					like={like}
 				/>)}
 			</div>
 		</div>

@@ -1,8 +1,8 @@
 import s from './Footer.module.scss'
-import vk from '../../assets/img/svg/VK.svg'
-import inst from '../../assets/img/svg/Instagram.svg'
-import tg from '../../assets/img/svg/Telegram.svg'
-import whatsup from '../../assets/img/svg/Whatsapp.svg'
+import vk from 'src/assets/img/svg/VK.svg'
+import inst from 'src/assets/img/svg/Instagram.svg'
+import tg from 'src/assets/img/svg/Telegram.svg'
+import whatsup from 'src/assets/img/svg/Whatsapp.svg'
 
 const Footer = () => {
 	return (

@@ -1,19 +1,36 @@
 import { FC } from 'react'
 import s from './Header.module.scss'
-import favorites from './../../assets/img/svg/headerHeartIcon.svg'
-import basket from './../../assets/img/svg/basketIcon.svg'
+import favoritesImg from 'src/assets/img/svg/headerHeartIcon.svg'
+import basket from 'src/assets/img/svg/basketIcon.svg'
+import MyCounter from './counter/MyCounter'
+import { useSelector } from 'react-redux'
+import { RootState } from 'src/redux/store'
 import { Link } from 'react-router-dom'
 
 
 const Header: FC = () => {
+
+	const favorites = useSelector((state: RootState) => state.favorites)
+
 	return (
 		<header className={s.header}>
 			<div className={s.logo} >
-				<h1>QPICK</h1>
+				<Link to={'/'}><h1>QPICK</h1></Link>
 			</div>
 			<div className={s.links}>
-				<img className={s.favorites} src={favorites} alt="" />
-				<img className={s.basket} src={basket} alt="" />
+				<div className={s.favorites}>
+					<div className={s.favoritesCounter}>
+						<MyCounter counter={favorites.length} />
+					</div>
+					<img src={favoritesImg} alt="" />
+				</div>
+
+				<div className={s.basket}>
+					<div className={s.basketCounter}>
+						<MyCounter counter={0} />
+					</div>
+					<img src={basket} alt="" />
+				</div>
 			</div>
 		</header>
 	)

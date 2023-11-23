@@ -1,8 +1,9 @@
-import { FC, useEffect, useState } from 'react'
+import Footer from 'src/components/Footer/Footer'
+import Header from 'src/components/Header.tsx/Header'
+import Main from 'src/components/Main/Main'
 import s from './App.module.scss'
-import Header from '../components/Header.tsx/Header'
-import Main from '../components/Main/Main'
-import Footer from '../components/Footer/Footer'
+
+import { FC } from 'react'
 
 
 

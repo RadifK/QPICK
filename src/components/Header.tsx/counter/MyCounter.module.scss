@@ -1,0 +1,13 @@
+@import './../../../App/variables.scss';
+
+.myCounter {
+	background-color: $fonr-color-orange;
+	height: 17px;
+	width: 17px;
+	border-radius: 50%;
+	font-size: 14px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
