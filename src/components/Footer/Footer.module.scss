@@ -12,6 +12,7 @@
 	column-gap: 15px;
 	flex: 0 0 auto;
 
+
 	@media (max-width:714px) {
 		grid-template-columns: repeat(2, auto);
 		justify-content: space-evenly;
