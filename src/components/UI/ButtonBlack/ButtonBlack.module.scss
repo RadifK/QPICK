@@ -1,0 +1,12 @@
+@import 'src/App/variables.scss';
+
+.button {
+	color: #fff;
+	background-color: $logo-color ;
+	border-radius: 15px;
+	padding: 22px 0px;
+	text-align: center;
+	width: 100%;
+	font-size: 17px;
+	cursor: pointer;
+}

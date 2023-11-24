@@ -1,19 +1,15 @@
 import s from './ProductsList.module.scss'
 import ProductsItem from './ProductsItem/ProductsItem'
-import { useSelector } from 'react-redux'
-import { RootState } from 'src/redux/store'
+import { FC } from 'react'
+import { productsType } from 'src/types'
 
 
+interface IPropsProductsList {
+	products: productsType[]
+}
 
 
-
-const ProductsList = () => {
-
-	const products = useSelector((state: RootState) => state.products)
-
-
-
-
+const ProductsList: FC<IPropsProductsList> = ({ products }) => {
 
 	return (
 		<div className={s.productsList}>

@@ -2,10 +2,14 @@
 
 .App {
 	min-height: 100vh;
-	max-width: 1109px;
-	margin: 0 auto;
+
+	display: flex;
+	flex-direction: column;
+
 
 	@media (max-width:1145px) {
 		padding: 0 15px;
 	}
+
+
 }

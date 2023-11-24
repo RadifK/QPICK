@@ -10,6 +10,7 @@
 	grid-template-rows: repeat(3, 35px);
 	min-height: 149px;
 	column-gap: 15px;
+	flex: 0 0 auto;
 
 	@media (max-width:714px) {
 		grid-template-columns: repeat(2, auto);

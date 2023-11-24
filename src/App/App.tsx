@@ -15,8 +15,10 @@ const App: FC = () => {
   return (
     <div className={s.App}>
       <Header />
-      <Main />
-      <Footer />
+      <div className='_content'>
+        <Main />
+        <Footer />
+      </div>
     </div>
   )
 }

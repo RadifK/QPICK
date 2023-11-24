@@ -1,48 +1,58 @@
+@import 'src/App/variables.scss';
+
+
+
 .header {
-	display: flex;
-	height: 60px;
-	align-items: center;
-	justify-content: space-between;
 
-	.logo {
-		font-size: 25px;
-		font-weight: 700;
-	}
+	background-color: $bgc;
+	position: sticky;
+	top: 0;
 
-
-
-
-
-
-	.links {
+	.header__content {
 		display: flex;
+		height: 60px;
 		align-items: center;
+		justify-content: space-between;
+		background-color: $bgc;
+		position: sticky;
+		top: 0;
+		z-index: 20;
 
-
-
-		.favorites {
-			position: relative;
+		.logo {
+			font-size: 25px;
+			font-weight: 700;
 		}
 
-		.favoritesCounter {
-			position: absolute;
-			left: 15px;
-			bottom: 15px;
-			z-index: 10;
-		}
+		.links {
+			display: flex;
+			align-items: center;
 
 
 
-		.basketCounter {
-			position: absolute;
-			left: 15px;
-			bottom: 17px;
-			z-index: 10;
-		}
+			.favorites {
+				position: relative;
+			}
 
-		.basket {
-			margin-left: 37px;
-			position: relative;
+			.favoritesCounter {
+				position: absolute;
+				left: 15px;
+				bottom: 15px;
+				z-index: 10;
+			}
+
+
+
+			.basketCounter {
+				position: absolute;
+				left: 15px;
+				bottom: 17px;
+				z-index: 10;
+			}
+
+			.basket {
+				margin-left: 37px;
+				position: relative;
+			}
 		}
 	}
 }

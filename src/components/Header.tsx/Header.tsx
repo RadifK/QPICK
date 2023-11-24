@@ -13,26 +13,32 @@ const Header: FC = () => {
 	const favorites = useSelector((state: RootState) => state.favorites)
 
 	return (
+
 		<header className={s.header}>
-			<div className={s.logo} >
-				<Link to={'/'}><h1>QPICK</h1></Link>
-			</div>
-			<div className={s.links}>
-				<div className={s.favorites}>
-					<div className={s.favoritesCounter}>
-						<MyCounter counter={favorites.length} />
+			<div className={`${s.header__content} _content`}>
+
+				<div className={s.logo} >
+					<Link to={'/'}><h1>QPICK</h1></Link>
+				</div>
+				<div className={s.links}>
+					<Link to={'/favorites'} className={s.favorites}>
+						<div className={s.favoritesCounter}>
+							<MyCounter counter={favorites.length} />
+						</div>
+						<img src={favoritesImg} alt="" />
+					</Link>
+
+					<div className={s.basket}>
+						<div className={s.basketCounter}>
+							<MyCounter counter={0} />
+						</div>
+						<img src={basket} alt="" />
 					</div>
-					<img src={favoritesImg} alt="" />
 				</div>
 
-				<div className={s.basket}>
-					<div className={s.basketCounter}>
-						<MyCounter counter={0} />
-					</div>
-					<img src={basket} alt="" />
-				</div>
 			</div>
 		</header>
+
 	)
 }
 
