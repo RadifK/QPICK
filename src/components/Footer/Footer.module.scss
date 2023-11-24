@@ -20,7 +20,9 @@
 	@media (max-width:421px) {
 		grid-template-columns: 1fr;
 		justify-content: space-evenly;
-
+		width: 310px;
+		column-gap: 5px;
+		padding: 15px;
 	}
 
 	.logo {
@@ -34,6 +36,10 @@
 
 		@media (max-width:714px) {
 			grid-column: 1/2;
+		}
+
+		@media (max-width:421px) {
+			font-size: 14px;
 		}
 	}
 
@@ -69,6 +75,10 @@
 			@media (max-width:714px) {
 				margin-left: 0;
 				margin-right: 15px;
+			}
+
+			@media (max-width:421px) {
+				margin-right: 10px;
 			}
 		}
 	}
