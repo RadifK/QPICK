@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './Favorites.module.scss'
 import ProductsList from '../Catalog/ProductsList/ProductsList'
 import { useSelector } from 'react-redux'
