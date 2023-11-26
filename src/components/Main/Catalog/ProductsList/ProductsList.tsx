@@ -2,7 +2,6 @@ import s from './ProductsList.module.scss'
 import ProductsItem from './ProductsItem/ProductsItem'
 import { FC } from 'react'
 import { productsType } from 'src/types'
-import Slider from 'src/components/UI/Slider/Slider'
 
 interface IPropsProductsList {
 	products: productsType[]

@@ -1,4 +1,3 @@
-import React from 'react'
 import s from './Slider.module.scss'
 import img from 'src/assets/img/pngJpeg/headphones1.png'
 import img2 from 'src/assets/img/pngJpeg/headphones2.png'
