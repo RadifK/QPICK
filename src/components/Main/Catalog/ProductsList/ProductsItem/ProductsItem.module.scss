@@ -13,18 +13,16 @@
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.10);
 	cursor: pointer;
 
+	&:hover {
+		transform: scale(1.05);
+		transition: all 0.1s ease-in-out;
+	}
+
 	@media (max-width:421px) {
 		width: 310px;
 	}
 
-	.likeButton {
-		grid-row-start: 1;
-		grid-column-start: 1;
 
-		img {
-			cursor: pointer;
-		}
-	}
 
 	.productImg {
 		grid-row-start: 2/3;

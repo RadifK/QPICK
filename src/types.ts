@@ -3,6 +3,6 @@ export type productsType = {
 	name: string,
 	price: string,
 	rating: number,
-	photo: string,
+	img: string,
 	isLiked: Boolean
 }
