@@ -1,20 +1,42 @@
 .slider {
-	grid-column: 1/3;
-	margin: 30px 0;
+	width: 100%;
 	display: flex;
-	overflow: hidden;
-	width: 350px;
+	align-items: center;
+	justify-content: center;
+	grid-column: 1/3;
+	height: 100%;
 
-	.line {
-		height: 410px;
-		width: 1400px;
+
+	.sliderContainer {
+		max-width: 85%;
+		min-width: 85%;
+		position: relative;
+		grid-column: 1/3;
 		display: flex;
+		overflow: hidden;
+		width: 100%;
+		align-items: center;
+
+		.line {
+			height: 100%;
+			width: 300%;
+			display: flex;
+		}
+
+		.item {
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 30px;
+			width: 100%;
+			object-fit: contain;
+		}
+
+
 	}
 
-	.item {
-		padding: 20px;
-		background-color: #fff;
-		border-radius: 30px;
-		width: 350px;
+	.button {
+		font-weight: 700;
+		cursor: pointer;
+		margin: 10px;
 	}
 }

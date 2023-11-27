@@ -7,6 +7,7 @@ import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from 'src/redux/store'
+import Slider from 'src/components/UI/Slider/Slider'
 
 
 
@@ -16,17 +17,24 @@ const ProductPage: FC = () => {
 	const products = useSelector((state: RootState) => state.products)
 	const [{ id, name, price, isLiked }] = products.filter(p => p.id === productId)
 
+	// <div className={s.images}>
+	// 						<img src={image} alt="" />
+	// 						<img src={image2} alt="" />
+	// 						<img src={image3} alt="" />
+	// 						<img src={image} alt="" />
+	// 						<img src={image2} alt="" />
+	// 					</div>
+
+	const arr = [image, image2, image3, image, image2]
 
 	return (
 		<div className={s.productPage}>
 			<div className={s.product}>
-				<ToFavorites id={id} isLiked={isLiked} />
+				<div className={s.like}><ToFavorites id={id} isLiked={isLiked} /></div>
 				<div className={s.images}>
-					<img src={image} alt="" />
-					<img src={image2} alt="" />
-					<img src={image3} alt="" />
-					<img src={image} alt="" />
-					<img src={image2} alt="" />
+					<Slider>
+						{arr}
+					</Slider>
 				</div>
 				<p className={s.name}>
 					{name}

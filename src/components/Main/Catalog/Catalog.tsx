@@ -1,9 +1,8 @@
+import Slider from 'src/components/UI/Slider/Slider'
 import Banner from './Banner/Banner'
 import ProductsList from './ProductsList/ProductsList'
 import { useSelector } from 'react-redux'
 import { RootState } from 'src/redux/store'
-
-
 
 
 const Catalog = () => {
@@ -14,6 +13,7 @@ const Catalog = () => {
 		<>
 			<Banner />
 			<ProductsList products={products} />
+
 		</>
 	)
 }

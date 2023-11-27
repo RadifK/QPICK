@@ -1,24 +1,28 @@
 @import 'src/App/variables.scss';
 
-.title {
-	color: $font-color-black;
-}
+.favorites {
+	width: 100%;
 
-.emptyFavorites {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 60%;
-	text-align: center;
-	margin: 0 auto;
-
-	.toCatalog {
-		width: 100%;
+	.title {
+		color: $font-color-black;
 	}
-}
 
-.emptyFavoritesText {
-	font-size: 30px;
-	font-weight: 700;
-	margin-bottom: 30px;
+	.emptyFavorites {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 60%;
+		text-align: center;
+		margin: 0 auto;
+
+		.toCatalog {
+			width: 100%;
+		}
+	}
+
+	.emptyFavoritesText {
+		font-size: 30px;
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
 }

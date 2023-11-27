@@ -13,18 +13,20 @@ h2 {
 	row-gap: 15px;
 	justify-content: start;
 
+
 	@media (max-width:1145px) {
 		column-gap: 15px;
 	}
 
-	@media (max-width:1110px) {
+	@media (max-width:1142px) {
 		grid-template-columns: repeat(2, auto);
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
 
 	@media (max-width:756px) {
 		grid-template-columns: repeat(1, auto);
-
 		justify-content: space-evenly;
 	}
+
+
 }

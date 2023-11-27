@@ -6,7 +6,7 @@ const Banner = () => {
 		<div className={s.banner}>
 			<h2>Аксессуары для
 				Iphone 13 Pro Max</h2>
-			<div className={s.imgBlock}><img src={img} alt="" /></div>
+			<div className={s.imgBlock}><img className={s.img} src={img} alt="" /></div>
 		</div>
 	)
 }

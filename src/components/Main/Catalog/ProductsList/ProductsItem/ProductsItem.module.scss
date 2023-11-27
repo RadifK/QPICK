@@ -18,8 +18,12 @@
 		transition: all 0.1s ease-in-out;
 	}
 
+
+
+
 	@media (max-width:421px) {
-		width: 310px;
+		width: 100%;
+
 	}
 
 
@@ -30,7 +34,7 @@
 		justify-self: center;
 		height: 235px;
 		object-fit: contain;
-		width: 219px;
+		width: 100%;
 		margin-bottom: 30px;
 	}
 

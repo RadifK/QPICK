@@ -120,9 +120,15 @@ body {
 
 ._content {
 	max-width: 1109px;
+	min-width: 1109px;
 	margin: 0 auto;
 
-	@media (max-width:1110px) {
-		max-width: 750px;
+	@media (max-width:1153px) {
+		min-width: 0px;
+	}
+
+	@media (max-width:1184px) {
+		margin-left: 20px;
+		margin-right: 20px;
 	}
 }

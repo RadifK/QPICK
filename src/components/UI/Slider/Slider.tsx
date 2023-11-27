@@ -1,16 +1,62 @@
+import { FC, useState } from 'react'
 import s from './Slider.module.scss'
-import img from 'src/assets/img/pngJpeg/headphones1.png'
-import img2 from 'src/assets/img/pngJpeg/headphones2.png'
-import img3 from 'src/assets/img/pngJpeg/headphones3.png'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
-const Slider = () => {
+
+
+interface ISliderProps {
+	children: string[]
+}
+
+const Slider: FC<ISliderProps> = ({ children }) => {
+
+	const [offset, setOffset] = useState(0)
+
+	const rightHandler = () => {
+		if (offset === -200) {
+			setOffset(0)
+		}
+		else {
+			setOffset((prev) => prev - 100)
+		}
+
+	}
+	const leftHandler = () => {
+		if (offset === 0) {
+			setOffset(-200)
+		}
+		else {
+			setOffset((prev) => prev + 100)
+		}
+
+	}
+
 	return (
 		<div className={s.slider}>
-			<div className={s.line}>
-				<img src={img} className={s.item} />
-				<img src={img2} className={s.item} />
-				<img src={img3} className={s.item} />
+			<FaChevronLeft onClick={leftHandler} className={s.button} />
+			<div className={s.sliderContainer}
+			>
+				<div className={s.line}
+					style={{
+						transform: `translateX(${offset}%)`,
+						transition: ' all 0.2s ease-in-out'
+					}}>
+					{
+						children.map(el => <img
+							className={s.item}
+							src={el}
+							style={{
+								height: '100%',
+								minWidth: '100%',
+								maxWidth: '100%'
+							}}
+						/>)
+					}
+
+				</div>
+
 			</div>
+			<FaChevronRight onClick={rightHandler} className={s.button} />
 		</div>
 	)
 }
