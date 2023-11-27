@@ -1,4 +1,3 @@
-import Slider from 'src/components/UI/Slider/Slider'
 import Banner from './Banner/Banner'
 import ProductsList from './ProductsList/ProductsList'
 import { useSelector } from 'react-redux'
