@@ -1,3 +1,6 @@
+import image from 'src/assets/img/pngJpeg/headphones1.png'
+import image2 from 'src/assets/img/pngJpeg/headphones2.png'
+import image3 from 'src/assets/img/pngJpeg/headphones3.png'
 import { createSlice } from "@reduxjs/toolkit";
 import { productsType } from "src/types";
 
@@ -9,7 +12,8 @@ const initialState: productsType[] = [
 		"rating": 4.2,
 		"img": "src/assets/img/pngJpeg/headphones1.png",
 		"isLiked": false,
-		"id": "1"
+		"id": "1",
+		"images": [image3, image, image2]
 	},
 	{
 		"name": "Apple EarPods",
@@ -17,7 +21,8 @@ const initialState: productsType[] = [
 		"rating": 4.2,
 		"img": "src/assets/img/pngJpeg/headphones2.png",
 		"isLiked": false,
-		"id": "2"
+		"id": "2",
+		"images": [image2, image3, image]
 	},
 	{
 		"name": "Apple EarPods",
@@ -25,7 +30,8 @@ const initialState: productsType[] = [
 		"rating": 4.5,
 		"img": "src/assets/img/pngJpeg/headphones3.png",
 		"isLiked": false,
-		"id": "3"
+		"id": "3",
+		"images": [image, image2, image3]
 	},
 	{
 		"name": "Apple BYZ S852I",
@@ -33,7 +39,8 @@ const initialState: productsType[] = [
 		"rating": 4.7,
 		"img": "src/assets/img/pngJpeg/headphones1.png",
 		"isLiked": false,
-		"id": "4"
+		"id": "4",
+		"images": [image, image2, image, image2]
 	},
 	{
 		"name": "Apple EarPods",
@@ -41,7 +48,8 @@ const initialState: productsType[] = [
 		"rating": 4.6,
 		"img": "src/assets/img/pngJpeg/headphones2.png",
 		"isLiked": false,
-		"id": "5"
+		"id": "5",
+		"images": [image3, image, image2]
 	},
 	{
 		"name": "Apple EarPods",
@@ -49,7 +57,8 @@ const initialState: productsType[] = [
 		"rating": 4.8,
 		"img": "src/assets/img/pngJpeg/headphones3.png",
 		"isLiked": false,
-		"id": "6"
+		"id": "6",
+		"images": [image2, image3, image]
 	}
 ]
 

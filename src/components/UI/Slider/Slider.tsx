@@ -13,7 +13,7 @@ const Slider: FC<ISliderProps> = ({ children }) => {
 	const [offset, setOffset] = useState(0)
 
 	const rightHandler = () => {
-		if (offset === -200) {
+		if (offset === (children.length - 1) * -100) {
 			setOffset(0)
 		}
 		else {
@@ -23,7 +23,7 @@ const Slider: FC<ISliderProps> = ({ children }) => {
 	}
 	const leftHandler = () => {
 		if (offset === 0) {
-			setOffset(-200)
+			setOffset((children.length - 1) * -100)
 		}
 		else {
 			setOffset((prev) => prev + 100)
@@ -56,7 +56,7 @@ const Slider: FC<ISliderProps> = ({ children }) => {
 				</div>
 
 			</div>
-			<FaChevronRight onClick={rightHandler} className={s.button} />
+			<FaChevronRight resize={false} onClick={rightHandler} className={s.button} />
 		</div>
 	)
 }

@@ -1,8 +1,5 @@
 import ToFavorites from 'src/components/ToFavorites/ToFavorites'
 import s from './ProductPage.module.scss'
-import image from 'src/assets/img/pngJpeg/headphones1.png'
-import image2 from 'src/assets/img/pngJpeg/headphones2.png'
-import image3 from 'src/assets/img/pngJpeg/headphones3.png'
 import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
@@ -15,17 +12,9 @@ const ProductPage: FC = () => {
 
 	const productId = useSelector((state: RootState) => state.product)
 	const products = useSelector((state: RootState) => state.products)
-	const [{ id, name, price, isLiked }] = products.filter(p => p.id === productId)
+	const [{ id, name, price, isLiked, images }] = products.filter(p => p.id === productId)
 
-	// <div className={s.images}>
-	// 						<img src={image} alt="" />
-	// 						<img src={image2} alt="" />
-	// 						<img src={image3} alt="" />
-	// 						<img src={image} alt="" />
-	// 						<img src={image2} alt="" />
-	// 					</div>
 
-	const arr = [image, image2, image3, image, image2]
 
 	return (
 		<div className={s.productPage}>
@@ -33,7 +22,7 @@ const ProductPage: FC = () => {
 				<div className={s.like}><ToFavorites id={id} isLiked={isLiked} /></div>
 				<div className={s.images}>
 					<Slider>
-						{arr}
+						{images}
 					</Slider>
 				</div>
 				<p className={s.name}>

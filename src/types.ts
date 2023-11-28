@@ -4,5 +4,6 @@ export type productsType = {
 	price: string,
 	rating: number,
 	img: string,
-	isLiked: Boolean
+	isLiked: Boolean,
+	images: string[]
 }
