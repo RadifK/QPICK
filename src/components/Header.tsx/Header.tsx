@@ -4,13 +4,13 @@ import favoritesImg from 'src/assets/img/svg/headerHeartIcon.svg'
 import basket from 'src/assets/img/svg/basketIcon.svg'
 import MyCounter from './counter/MyCounter'
 import { useSelector } from 'react-redux'
-import { RootState } from 'src/redux/store'
+import { RootState } from 'src/store/store'
 import { Link } from 'react-router-dom'
 
 
 const Header: FC = () => {
 
-	const favorites = useSelector((state: RootState) => state.favorites)
+	const favorites = useSelector((state: RootState) => state.products).filter(p => p.isLiked)
 
 	return (
 

@@ -2,10 +2,10 @@ import image from 'src/assets/img/pngJpeg/headphones1.png'
 import image2 from 'src/assets/img/pngJpeg/headphones2.png'
 import image3 from 'src/assets/img/pngJpeg/headphones3.png'
 import { createSlice } from "@reduxjs/toolkit";
-import { productsType } from "src/types";
+import productType from "src/types/productsType";
 
 
-const initialState: productsType[] = [
+const initialState: productType[] = [
 	{
 		"name": "Apple BYZ S852I",
 		"price": "1000",

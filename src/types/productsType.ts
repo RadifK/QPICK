@@ -1,4 +1,4 @@
-export type productsType = {
+type productType = {
 	id: string,
 	name: string,
 	price: string,
@@ -7,3 +7,5 @@ export type productsType = {
 	isLiked: Boolean,
 	images: string[]
 }
+
+export default productType

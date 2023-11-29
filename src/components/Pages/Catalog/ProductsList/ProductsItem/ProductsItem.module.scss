@@ -53,18 +53,4 @@
 		justify-self: end;
 	}
 
-	.rating {
-		display: flex;
-		align-items: end;
-		align-self: center;
-
-		img {
-			margin-right: 10px;
-		}
-
-		p {
-			color: $font-color-gray;
-
-		}
-	}
 }

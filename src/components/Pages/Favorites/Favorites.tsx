@@ -1,7 +1,7 @@
 import s from './Favorites.module.scss'
 import ProductsList from '../Catalog/ProductsList/ProductsList'
 import { useSelector } from 'react-redux'
-import { RootState } from 'src/redux/store'
+import { RootState } from 'src/store/store'
 import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
 import { Link } from 'react-router-dom'
 

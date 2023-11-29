@@ -2,8 +2,7 @@ import unlikedHeart from 'src/assets/img/svg/unlikedHeart.svg'
 import likedHeart from 'src/assets/img/svg/likedHeart.svg'
 import { useDispatch } from 'react-redux'
 import { FC, MouseEvent } from 'react'
-import { addProductToFavorites, removeFromFavorites } from 'src/redux/slices/favoritesSlice'
-import { like } from 'src/redux/slices/productsSlice'
+import { like } from 'src/store/slices/productsSlice'
 import s from './ToFavorites.module.scss'
 
 
@@ -23,10 +22,6 @@ const ToFavorites: FC<IToFavoritesProps> = ({ id, isLiked }) => {
 		e.preventDefault()
 		e.stopPropagation()
 		dispatch(like(id))
-		!isLiked ? dispatch(addProductToFavorites(id))
-			:
-			dispatch(removeFromFavorites(id))
-
 	}
 
 	return (

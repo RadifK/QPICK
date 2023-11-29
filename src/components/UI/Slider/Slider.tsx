@@ -22,6 +22,7 @@ const Slider: FC<ISliderProps> = ({ children }) => {
 
 	}
 	const leftHandler = () => {
+
 		if (offset === 0) {
 			setOffset((children.length - 1) * -100)
 		}
@@ -39,24 +40,18 @@ const Slider: FC<ISliderProps> = ({ children }) => {
 				<div className={s.line}
 					style={{
 						transform: `translateX(${offset}%)`,
-						transition: ' all 0.2s ease-in-out'
 					}}>
 					{
 						children.map(el => <img
+							key={el}
 							className={s.item}
 							src={el}
-							style={{
-								height: '100%',
-								minWidth: '100%',
-								maxWidth: '100%'
-							}}
 						/>)
 					}
-
 				</div>
 
 			</div>
-			<FaChevronRight resize={false} onClick={rightHandler} className={s.button} />
+			<FaChevronRight onClick={rightHandler} className={s.button} />
 		</div>
 	)
 }

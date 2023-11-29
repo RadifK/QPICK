@@ -3,16 +3,26 @@ import s from './ProductPage.module.scss'
 import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
 import { FC } from 'react'
 import { useSelector } from 'react-redux'
-import { RootState } from 'src/redux/store'
+import { RootState } from 'src/store/store'
 import Slider from 'src/components/UI/Slider/Slider'
+import { useParams } from 'react-router'
+import NotFound from 'src/components/NotFound/NotFound'
+import Reviews from './Reviews/Reviews'
 
 
 
 const ProductPage: FC = () => {
 
-	const productId = useSelector((state: RootState) => state.product)
+	const params = useParams()
+
+
 	const products = useSelector((state: RootState) => state.products)
-	const [{ id, name, price, isLiked, images }] = products.filter(p => p.id === productId)
+	const product = products.filter(p => p.id === params.id)
+	if (!product.length) {
+		return <NotFound />
+	}
+	const [{ id, name, price, isLiked, images }] = product
+
 
 
 
@@ -50,8 +60,8 @@ const ProductPage: FC = () => {
 					<li>Частотный диапазон: 20 Гц - 20000 Гц</li>
 					<li>Чувствительность: 109 дБ</li>
 				</ul>
-
 			</div>
+			<Reviews />
 			<div className={s.buttons}>
 				<ButtonBlack value='Добавить в корзину' />
 			</div>
