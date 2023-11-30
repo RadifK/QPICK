@@ -1,0 +1,29 @@
+.modalWrapper {
+
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.modal {
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	display: block;
+	width: 40%;
+	height: 90%;
+	background: #fff;
+	border-radius: 30px;
+	transform: translate(-50%, -50%)
+}
+
+body {
+	overflow: hidden;
+}

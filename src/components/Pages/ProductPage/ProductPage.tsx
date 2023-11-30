@@ -1,14 +1,14 @@
 import ToFavorites from 'src/components/ToFavorites/ToFavorites'
 import s from './ProductPage.module.scss'
 import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from 'src/store/store'
 import Slider from 'src/components/UI/Slider/Slider'
 import { useParams } from 'react-router'
 import NotFound from 'src/components/NotFound/NotFound'
 import Reviews from './Reviews/Reviews'
-
+import { FaChevronDown } from 'react-icons/fa'
 
 
 const ProductPage: FC = () => {
@@ -23,6 +23,7 @@ const ProductPage: FC = () => {
 	}
 	const [{ id, name, price, isLiked, images }] = product
 
+	const [descView, setDescView] = useState(false)
 
 
 
@@ -42,26 +43,44 @@ const ProductPage: FC = () => {
 			</div>
 
 			<div className={s.description}>
-				<div className={s.descTitle}>Описание и характеристики</div>
-				<ul>
-					<li>Активное шумоподавление: Нет</li>
-					<li>Вес: 10 гр</li>
-					<li>Влагозащита: Нет</li>
-					<li>Длина кабеля: 1.2 м</li>
-					<li>Комплектация: Наушники</li>
-					<li>Материал корпуса: Пластик, резина</li>
-					<li>Микрофон: Да</li>
-					<li>Назначение: Проводные наушники</li>
-					<li>Ответить/закончить разговор: Да</li>
-					<li>Разъем наушников: Lightning</li>
-					<li>Тип крепления: Без крепления</li>
-					<li>Тип наушников: Вкладыши ("таблетки")</li>
-					<li>Тип подключения: Проводное</li>
-					<li>Частотный диапазон: 20 Гц - 20000 Гц</li>
-					<li>Чувствительность: 109 дБ</li>
-				</ul>
+				<div className={s.descTitle}>
+					<p>
+						Описание и характеристики
+					</p>
+					<div className={!descView ? s.chevrone
+						:
+						`${s.chevrone} ${s.chevroneOpened}`}>
+						<FaChevronDown
+							onClick={() => { setDescView(!descView) }} />
+					</div>
+				</div>
+
+
+				{descView ?
+					<ul >
+						<li>Активное шумоподавление: Нет</li>
+						<li>Вес: 10 гр</li>
+						<li>Влагозащита: Нет</li>
+						<li>Длина кабеля: 1.2 м</li>
+						<li>Комплектация: Наушники</li>
+						<li>Материал корпуса: Пластик, резина</li>
+						<li>Микрофон: Да</li>
+						<li>Назначение: Проводные наушники</li>
+						<li>Ответить/закончить разговор: Да</li>
+						<li>Разъем наушников: Lightning</li>
+						<li>Тип крепления: Без крепления</li>
+						<li>Тип наушников: Вкладыши ("таблетки")</li>
+						<li>Тип подключения: Проводное</li>
+						<li>Частотный диапазон: 20 Гц - 20000 Гц</li>
+						<li>Чувствительность: 109 дБ</li>
+					</ul>
+					:
+					<>
+					</>}
+
 			</div>
-			<Reviews />
+
+			<Reviews id={id} />
 			<div className={s.buttons}>
 				<ButtonBlack value='Добавить в корзину' />
 			</div>

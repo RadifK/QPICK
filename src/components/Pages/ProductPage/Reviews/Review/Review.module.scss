@@ -1,0 +1,20 @@
+@import '/src/App/variables.scss';
+
+.review {
+	background-color: $bgc;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.message {
+	margin-top: 10px;
+	font-weight: 500;
+	font-size: 14px;
+	color: $font-color-black;
+}
+
+.nameAndRating {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}

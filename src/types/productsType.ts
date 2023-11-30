@@ -1,3 +1,5 @@
+import reviewType from "./reviewType"
+
 type productType = {
 	id: string,
 	name: string,
@@ -5,7 +7,8 @@ type productType = {
 	rating: number,
 	img: string,
 	isLiked: Boolean,
-	images: string[]
+	images: string[],
+	reviews: reviewType[]
 }
 
 export default productType
