@@ -7,26 +7,35 @@ import { RootState } from 'src/store/store'
 import Review from './Review/Review'
 import CreateReviewModal from './CreateReviewModal/CreateReviewModal'
 
+
 interface IReviewsProps {
 	id: string
 }
 
 const Reviews: FC<IReviewsProps> = ({ id }) => {
 
-	const [product] = useSelector((state: RootState) => state.products.filter(p => p.id === id))
-	const reviews = product.reviews
+	const [{ reviewId, rating, productReviews }] = useSelector((state: RootState) => state.reviews.filter(r => r.reviewId === id))
 
-	const rating = product.rating
+
 	const [open, setOpen] = useState<Boolean>(false)
 
 	const [modal, setModal] = useState(false)
 
+	const hideModal = () => {
+		setModal(false)
+	}
+	const showModal = () => {
+		setModal(true)
+	}
+
 	return (
 		<div className={s.reviews}>
-			<CreateReviewModal />
+			{modal ? <CreateReviewModal
+				hideModal={hideModal}
+				productId={id} /> : <></>}
 			<div className={s.reviewHeader}>
 				<p className={s.title}>Отзывы</p>
-				<div className={s.writeButton}>
+				<div className={s.writeButton} onClick={showModal}>
 					<FaMessage />
 				</div>
 				<Rating value={rating} />
@@ -36,7 +45,8 @@ const Reviews: FC<IReviewsProps> = ({ id }) => {
 			{open ?
 				<div className={s.reviewsBlock}>
 					<div className={s.list}>
-						{reviews.map(r => <Review name={r.name}
+						{productReviews.map(r => <Review name={r.name}
+							key={reviewId}
 							message={r.message}
 							rating={r.rating} />)}
 					</div>

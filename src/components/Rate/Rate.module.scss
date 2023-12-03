@@ -1,0 +1,21 @@
+img {
+	cursor: pointer;
+}
+
+.rate {
+	display: flex;
+}
+
+.rateBlock {
+	display: flex;
+	align-items: center;
+
+}
+
+.requiredWarning {
+	margin-left: 10px;
+	color: red;
+	font-size: 14px;
+	font-weight: 400;
+	cursor: default;
+}

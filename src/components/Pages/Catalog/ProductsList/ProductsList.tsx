@@ -1,7 +1,8 @@
 import s from './ProductsList.module.scss'
 import ProductsItem from './ProductsItem/ProductsItem'
 import { FC } from 'react'
-import { productsType } from 'src/types/productsType'
+import productsType from 'src/types/productsType'
+
 
 interface IPropsProductsList {
 	products: productsType[]
@@ -9,6 +10,8 @@ interface IPropsProductsList {
 
 
 const ProductsList: FC<IPropsProductsList> = ({ products }) => {
+
+
 
 	return (
 		<div className={s.productsList}>
@@ -19,7 +22,6 @@ const ProductsList: FC<IPropsProductsList> = ({ products }) => {
 					name={p.name}
 					id={p.id}
 					price={p.price}
-					rating={p.rating}
 					img={p.img}
 					isLiked={p.isLiked}
 				/>)}

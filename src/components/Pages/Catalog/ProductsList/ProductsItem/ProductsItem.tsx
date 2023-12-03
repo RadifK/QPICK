@@ -3,20 +3,24 @@ import { FC } from 'react'
 import ToFavorites from 'src/components/ToFavorites/ToFavorites'
 import { Link } from 'react-router-dom'
 import Rating from 'src/components/Rating/Rating'
+import { useSelector } from 'react-redux'
+import { RootState } from 'src/store/store'
 
 
-type TypeProductsItemProps = {
+interface IProductsItemProps {
 	id: string,
 	key: string,
 	name: string,
 	price: string,
-	rating: number,
 	img: string,
 	isLiked: Boolean,
 }
 
 
-const ProductsItem: FC<TypeProductsItemProps> = ({ name, price, rating, img, isLiked, id }) => {
+const ProductsItem: FC<IProductsItemProps> = ({ name, price, img, isLiked, id }) => {
+
+	const [{ rating }] = useSelector((state: RootState) => state.reviews)
+		.filter(r => r.reviewId === id)
 
 	return (
 		<Link to={`/product/${id}`}>

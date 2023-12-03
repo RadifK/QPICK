@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import products from './slices/productsSlice'
+import reviews from './slices/reviewsSlice'
 
 
 export const store = configureStore({
 	reducer: {
-		products
+		products,
+		reviews
 	},
 })
 

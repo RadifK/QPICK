@@ -1,14 +1,14 @@
-import { MouseEvent, FC } from 'react'
+import { FC, ButtonHTMLAttributes } from 'react'
 import s from './ButtonBlack.module.scss'
 
-interface IButtonBlackProps {
+interface IButtonBlackProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	value: string,
-	onClick?: MouseEvent<HTMLButtonElement>
+	onClick?: () => void,
 }
 
-const ButtonBlack: FC<IButtonBlackProps> = ({ value }) => {
+const ButtonBlack: FC<IButtonBlackProps> = ({ value, ...props }) => {
 	return (
-		<button className={s.button}>
+		<button {...props} className={s.button}>
 			{value}
 		</button>
 	)
