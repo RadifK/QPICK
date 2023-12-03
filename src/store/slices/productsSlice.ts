@@ -9,7 +9,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple BYZ S852I",
 		"price": "1000",
-		"img": "src/assets/img/pngJpeg/headphones1.png",
+		"img": image,
 		"isLiked": false,
 		"id": "1",
 		"images": [image3, image, image2],
@@ -17,7 +17,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple EarPods",
 		"price": "1200",
-		"img": "src/assets/img/pngJpeg/headphones2.png",
+		"img": image2,
 		"isLiked": false,
 		"id": "2",
 		"images": [image2, image3, image],
@@ -26,7 +26,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple EarPods",
 		"price": "1400",
-		"img": "src/assets/img/pngJpeg/headphones3.png",
+		"img": image3,
 		"isLiked": false,
 		"id": "3",
 		"images": [image, image2, image3],
@@ -35,7 +35,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple BYZ S852I",
 		"price": "1000",
-		"img": "src/assets/img/pngJpeg/headphones1.png",
+		"img": image,
 		"isLiked": false,
 		"id": "4",
 		"images": [image, image2, image, image2],
@@ -44,7 +44,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple EarPods",
 		"price": "1200",
-		"img": "src/assets/img/pngJpeg/headphones2.png",
+		"img": image2,
 		"isLiked": false,
 		"id": "5",
 		"images": [image3, image, image2],
@@ -53,7 +53,7 @@ const initialState: productType[] = [
 	{
 		"name": "Apple EarPods",
 		"price": "1400",
-		"img": "src/assets/img/pngJpeg/headphones3.png",
+		"img": image3,
 		"isLiked": false,
 		"id": "6",
 		"images": [image2, image3, image],
