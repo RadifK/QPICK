@@ -1,4 +1,4 @@
-import Banner from './Banner/Banner'
+
 import ProductsList from './ProductsList/ProductsList'
 import { useSelector } from 'react-redux'
 import { RootState } from 'src/store/store'
@@ -10,7 +10,7 @@ const Catalog = () => {
 
 	return (
 		<>
-			<Banner />
+			{/* место для баннера */}
 			<ProductsList products={products} />
 
 		</>
