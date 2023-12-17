@@ -8,7 +8,17 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
 	return (
 		<footer className={s.footer}>
-			{/* сюда */}
+		<div className={s.logo}>QPICK</div>
+			<Link to={'/favorites'}><p>Избранное</p></Link>
+			<p>Корзина</p>
+			<p>Контакты</p>
+			<p className={s.service}>Условия сервиса</p>
+			<div className={s.socialNetworks}>
+				<img src={vk} alt="" />
+				<img src={inst} alt="" />
+				<img src={tg} alt="" />
+				<img src={whatsup} alt="" />
+			</div>
 		</footer>
 	)
 }
