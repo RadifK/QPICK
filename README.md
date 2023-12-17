@@ -1,30 +1,29 @@
-# React + TypeScript + Vite
+Документация к клиентской части сайта магазина:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Введение
 
-Currently, two official plugins are available:
+Документация к клиентской части сайта "QPICK" представляет собой описание основных функций и возможностей, предоставляемых пользователю при использовании сайта.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 1. Навигация:
 
-## Expanding the ESLint configuration
+- Главная страница: здесь пользователи могут просматривать список товаров, добавлять товары в избранное и удалять их из него, а так же осуществить переход к странице товара и в избранное.
+- Избранное: здесь пользователи могут просматривать товары, добавленные в избранное, а так же удалить товар из избранного и перейти на страницу товара и главную страницу
+- Карточка товара: здесь пользователи могут просматривать подробную информацию о товаре, включая его описание, цену, наличие, отзывы и т.д, так же пользователи могут оставить отзыв
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+## 2. Функциональность:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- Просмотр товаров
+- Добавление в избранное
+- Просмотр информации о товаре и отзывов
+- Добавление отзывов
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## 3. Отзывы и рейтинги:
+
+- Пользователи могут оставлять отзывы о товарах и ставить им рейтинг, что помогает другим пользователям принимать решение о покупке.
+
+## 4. Адаптивность:
+
+- Сайт адаптирован под различные устройства, такие как компьютеры, планшеты и смартфоны, для удобного использования на любом устройстве.
+
+### Это основная функциональность клиентской части сайта магазина.
