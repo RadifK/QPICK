@@ -8,7 +8,7 @@ import { useParams } from 'react-router'
 import NotFound from 'src/components/NotFound/NotFound'
 import Reviews from './Reviews/Reviews'
 import { FaChevronDown } from 'react-icons/fa'
-// сюда импорт
+import Slider from 'src/components/UI/Slider/Slider'
 
 
 const ProductPage: FC = () => {
@@ -32,7 +32,9 @@ const ProductPage: FC = () => {
 			<div className={s.product}>
 				<div className={s.like}><ToFavorites id={id} isLiked={isLiked} /></div>
 				<div className={s.images}>
-					{/* сюда вставляй компонент */}
+				<Slider>
+						{images}
+					</Slider>
 				</div>
 				<p className={s.name}>
 					{name}
