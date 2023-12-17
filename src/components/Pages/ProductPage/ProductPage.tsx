@@ -4,11 +4,11 @@ import ButtonBlack from 'src/components/UI/ButtonBlack/ButtonBlack'
 import { FC, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { RootState } from 'src/store/store'
-import Slider from 'src/components/UI/Slider/Slider'
 import { useParams } from 'react-router'
 import NotFound from 'src/components/NotFound/NotFound'
 import Reviews from './Reviews/Reviews'
 import { FaChevronDown } from 'react-icons/fa'
+// сюда импорт
 
 
 const ProductPage: FC = () => {
@@ -32,9 +32,7 @@ const ProductPage: FC = () => {
 			<div className={s.product}>
 				<div className={s.like}><ToFavorites id={id} isLiked={isLiked} /></div>
 				<div className={s.images}>
-					<Slider>
-						{images}
-					</Slider>
+					{/* сюда вставляй компонент */}
 				</div>
 				<p className={s.name}>
 					{name}
